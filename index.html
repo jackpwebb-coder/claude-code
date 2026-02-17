@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nova Scotia Walk Rater</title>
+  <title>Kate and Jack's Walks</title>
   <style>
     :root {
       --ocean: #2b6777;
@@ -18,6 +18,7 @@
       --text: #2d3436;
       --text-light: #636e72;
       --shadow: rgba(43, 103, 119, 0.15);
+      --pink: #e8a0bf;
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -50,10 +51,39 @@
     }
 
     header h1 {
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 700;
       letter-spacing: -0.5px;
       margin-bottom: 0.25rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    .title-hearts { color: var(--pink); font-size: 0.85em; }
+
+    .floating-hearts {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      pointer-events: none; overflow: hidden;
+    }
+    .floating-hearts span {
+      position: absolute; font-size: 1.2rem; opacity: 0.15;
+      animation: floatHeart 12s infinite ease-in-out;
+    }
+    .floating-hearts span:nth-child(1) { left: 5%; animation-delay: 0s; animation-duration: 10s; }
+    .floating-hearts span:nth-child(2) { left: 15%; animation-delay: 2s; animation-duration: 14s; font-size: 0.9rem; }
+    .floating-hearts span:nth-child(3) { left: 30%; animation-delay: 4s; animation-duration: 11s; }
+    .floating-hearts span:nth-child(4) { left: 50%; animation-delay: 1s; animation-duration: 13s; font-size: 1.5rem; }
+    .floating-hearts span:nth-child(5) { left: 65%; animation-delay: 3s; animation-duration: 10s; font-size: 0.8rem; }
+    .floating-hearts span:nth-child(6) { left: 80%; animation-delay: 5s; animation-duration: 12s; }
+    .floating-hearts span:nth-child(7) { left: 92%; animation-delay: 2.5s; animation-duration: 15s; }
+
+    @keyframes floatHeart {
+      0% { transform: translateY(100px) rotate(0deg) scale(1); opacity: 0; }
+      10% { opacity: 0.15; }
+      50% { opacity: 0.2; }
+      90% { opacity: 0.1; }
+      100% { transform: translateY(-200px) rotate(25deg) scale(0.6); opacity: 0; }
     }
 
     header p {
@@ -174,6 +204,7 @@
     }
 
     .form-group textarea { resize: vertical; min-height: 70px; }
+    .form-group .hint { font-size: 0.78rem; color: var(--text-light); margin-top: 0.25rem; }
 
     .rating-input {
       display: flex;
@@ -370,6 +401,14 @@
       font-style: italic;
     }
 
+    .walk-map-link {
+      display: inline-flex; align-items: center; gap: 0.35rem; margin-top: 0.5rem;
+      padding: 0.3rem 0.7rem; background: linear-gradient(135deg, #5b63d3, #7c5bbf);
+      color: var(--white); border-radius: 20px; font-size: 0.78rem; font-weight: 600;
+      text-decoration: none; transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .walk-map-link:hover { transform: translateY(-1px); box-shadow: 0 3px 10px rgba(91,99,211,0.3); }
+
     .walk-tags {
       display: flex;
       gap: 0.4rem;
@@ -439,6 +478,9 @@
       gap: 1rem;
     }
 
+    footer { text-align: center; padding: 1.5rem 1rem 2rem; color: var(--text-light); font-size: 0.8rem; }
+    .footer-hearts { color: var(--pink); font-size: 1rem; letter-spacing: 3px; margin-bottom: 0.3rem; }
+
     @media (max-width: 500px) {
       header h1 { font-size: 1.5rem; }
       .raters, .names-row { grid-template-columns: 1fr; }
@@ -449,7 +491,11 @@
 </head>
 <body>
   <header>
-    <h1>Nova Scotia Walk Rater</h1>
+    <div class="floating-hearts">
+      <span>&#10084;</span><span>&#10084;</span><span>&#10084;</span>
+      <span>&#10084;</span><span>&#10084;</span><span>&#10084;</span><span>&#10084;</span>
+    </div>
+    <h1><span class="title-hearts">&#10084;</span> Kate and Jack's Walks <span class="title-hearts">&#10084;</span></h1>
     <p>Our trail adventures, rated together</p>
     <div class="stats-bar">
       <div class="stat">
@@ -475,11 +521,11 @@
       <div class="names-row">
         <div class="form-group">
           <label for="name1Input">Person 1</label>
-          <input type="text" id="name1Input" placeholder="e.g. Alex">
+          <input type="text" id="name1Input" placeholder="e.g. Kate">
         </div>
         <div class="form-group">
           <label for="name2Input">Person 2</label>
-          <input type="text" id="name2Input" placeholder="e.g. Jordan">
+          <input type="text" id="name2Input" placeholder="e.g. Jack">
         </div>
       </div>
       <div class="form-actions">
@@ -502,6 +548,11 @@
 
     <div class="walks-list" id="walksList"></div>
   </main>
+
+  <footer>
+    <div class="footer-hearts">&#10084; &#10084; &#10084;</div>
+    <p>Made with love in Nova Scotia</p>
+  </footer>
 
   <!-- Add/Edit Modal -->
   <div class="modal-overlay" id="modalOverlay" onclick="closeModalOutside(event)">
@@ -564,6 +615,12 @@
       </div>
 
       <div class="form-group" style="margin-top:1rem;">
+        <label for="walkRunkeeper">RunKeeper Map Link</label>
+        <input type="url" id="walkRunkeeper" placeholder="e.g. https://runkeeper.com/user/...">
+        <div class="hint">Paste your RunKeeper activity URL to attach the route map</div>
+      </div>
+
+      <div class="form-group">
         <label for="walkNotes">Notes</label>
         <textarea id="walkNotes" placeholder="How was the walk? Any highlights?"></textarea>
       </div>
