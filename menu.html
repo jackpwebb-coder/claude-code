@@ -153,9 +153,11 @@
       letter-spacing: 1px;
     }
 
-    .footer canvas {
+    .footer img.qr {
       display: block;
       margin: 0 auto;
+      width: 90px;
+      height: 90px;
     }
 
     /* Print styles */
@@ -167,7 +169,6 @@
       }
     }
   </style>
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.4/build/qrcode.min.js"></script>
 </head>
 <body>
 
@@ -340,16 +341,8 @@
   <!-- QR CODE -->
   <div class="footer">
     <p>Visit us online</p>
-    <canvas id="qrcode"></canvas>
+    <img class="qr" src="qrcode.png" alt="QR code to thesarsfieldgroup.com">
   </div>
-
-  <script>
-    QRCode.toCanvas(document.getElementById('qrcode'), 'https://thesarsfieldgroup.com', {
-      width: 90,
-      margin: 1,
-      color: { dark: '#2d3a4a', light: '#ffffff' }
-    });
-  </script>
 
 </body>
 </html>
