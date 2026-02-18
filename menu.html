@@ -18,8 +18,8 @@
 
     body {
       font-family: Georgia, 'Times New Roman', serif;
-      color: #e8e8e8;
-      background: #2d3a4a;
+      color: #1a1a1a;
+      background: #ffffff;
       max-width: 8.5in;
       margin: 0 auto;
       padding: 0.5in;
@@ -28,25 +28,25 @@
     /* Header */
     .header {
       text-align: center;
-      border-bottom: 3px double #d4782e;
-      padding-bottom: 20px;
-      margin-bottom: 28px;
+      border-bottom: 2px solid #2d3a4a;
+      padding-bottom: 18px;
+      margin-bottom: 20px;
     }
 
     .header h1 {
-      font-size: 36px;
+      font-size: 34px;
       font-weight: 700;
-      letter-spacing: 4px;
+      letter-spacing: 3px;
       text-transform: uppercase;
-      margin-bottom: 10px;
-      color: #ffffff;
+      margin-bottom: 6px;
+      color: #2d3a4a;
     }
 
     .header .subtitle {
       font-size: 13px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #d4782e;
+      color: #555;
     }
 
     /* Pricing bar */
@@ -54,22 +54,22 @@
       display: flex;
       justify-content: center;
       gap: 40px;
-      background: #d4782e;
-      color: #fff;
       padding: 10px 0;
-      margin-bottom: 28px;
-      font-size: 14px;
+      margin-bottom: 22px;
+      font-size: 15px;
+      font-weight: 700;
       letter-spacing: 1px;
-      border-radius: 4px;
+      color: #1a1a1a;
+      border-bottom: 1px solid #ccc;
     }
 
     .pricing-bar span {
-      font-weight: 600;
+      font-weight: 700;
     }
 
     /* Section */
     .section {
-      margin-bottom: 26px;
+      margin-bottom: 24px;
     }
 
     .section-title {
@@ -77,10 +77,10 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 3px;
-      border-bottom: 1px solid #d4782e;
-      padding-bottom: 6px;
+      border-bottom: 1px solid #999;
+      padding-bottom: 5px;
       margin-bottom: 14px;
-      color: #ffffff;
+      color: #2d3a4a;
     }
 
     /* Beer list */
@@ -103,24 +103,33 @@
     .beer-name {
       font-size: 15px;
       font-weight: 700;
-      color: #ffffff;
+      color: #c0392b;
     }
 
     .beer-abv {
       font-size: 12px;
       font-weight: 600;
-      color: #d4782e;
+      color: #333;
       white-space: nowrap;
     }
 
     .beer-desc {
       font-size: 11.5px;
-      color: #b0b8c4;
+      color: #444;
       line-height: 1.45;
       margin-top: 2px;
     }
 
-    /* Cider and seltzer use single column since fewer items */
+    /* Cider names use a different accent colour */
+    .cider-list .beer-name {
+      color: #d4782e;
+    }
+
+    /* Seltzer names use a different accent colour */
+    .seltzer-list .beer-name {
+      color: #2980b9;
+    }
+
     .cider-list {
       columns: 2;
       column-gap: 36px;
@@ -134,11 +143,11 @@
     /* Footer */
     .footer {
       text-align: center;
-      border-top: 3px double #d4782e;
+      border-top: 2px solid #2d3a4a;
       padding-top: 14px;
-      margin-top: 28px;
+      margin-top: 24px;
       font-size: 12px;
-      color: #b0b8c4;
+      color: #555;
       letter-spacing: 1px;
     }
 
@@ -146,11 +155,6 @@
     @media print {
       body {
         padding: 0;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
-      }
-
-      .pricing-bar {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
       }
@@ -168,7 +172,7 @@
     <span>12oz &mdash; $6</span>
     <span>16oz &mdash; $7</span>
     <span>20oz &mdash; $8</span>
-    <span style="font-weight: 400; font-size: 12px; opacity: 0.85;">(+ tax)</span>
+    <span style="font-weight: 400; font-size: 12px; color: #666;">(+ tax)</span>
   </div>
 
   <!-- BEER -->
