@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Port Williams Tap Room Menu</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 0.5in;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: #e8e8e8;
+      background: #2d3a4a;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.5in;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      border-bottom: 3px double #d4782e;
+      padding-bottom: 20px;
+      margin-bottom: 28px;
+    }
+
+    .header h1 {
+      font-size: 36px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      color: #ffffff;
+    }
+
+    .header .subtitle {
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #d4782e;
+    }
+
+    /* Pricing bar */
+    .pricing-bar {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      background: #d4782e;
+      color: #fff;
+      padding: 10px 0;
+      margin-bottom: 28px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      border-radius: 4px;
+    }
+
+    .pricing-bar span {
+      font-weight: 600;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 26px;
+    }
+
+    .section-title {
+      font-size: 20px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      border-bottom: 1px solid #d4782e;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      color: #ffffff;
+    }
+
+    /* Beer list */
+    .beer-list {
+      columns: 2;
+      column-gap: 36px;
+    }
+
+    .beer-item {
+      break-inside: avoid;
+      margin-bottom: 14px;
+    }
+
+    .beer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .beer-name {
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff;
+    }
+
+    .beer-abv {
+      font-size: 12px;
+      font-weight: 600;
+      color: #d4782e;
+      white-space: nowrap;
+    }
+
+    .beer-desc {
+      font-size: 11.5px;
+      color: #b0b8c4;
+      line-height: 1.45;
+      margin-top: 2px;
+    }
+
+    /* Cider and seltzer use single column since fewer items */
+    .cider-list {
+      columns: 2;
+      column-gap: 36px;
+    }
+
+    .seltzer-list {
+      columns: 2;
+      column-gap: 36px;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      border-top: 3px double #d4782e;
+      padding-top: 14px;
+      margin-top: 28px;
+      font-size: 12px;
+      color: #b0b8c4;
+      letter-spacing: 1px;
+    }
+
+    /* Print styles */
+    @media print {
+      body {
+        padding: 0;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .pricing-bar {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Port Williams Tap Room</h1>
+    <div class="subtitle">Craft Beer &middot; Cider &middot; Seltzer</div>
+  </div>
+
+  <div class="pricing-bar">
+    <span>12oz &mdash; $6</span>
+    <span>16oz &mdash; $7</span>
+    <span>20oz &mdash; $8</span>
+    <span style="font-weight: 400; font-size: 12px; opacity: 0.85;">(+ tax)</span>
+  </div>
+
+  <!-- BEER -->
+  <div class="section">
+    <div class="section-title">Beer</div>
+    <div class="beer-list">
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Lager</span>
+          <span class="beer-abv">4.5% ABV</span>
+        </div>
+        <div class="beer-desc">A crisp and refreshing Czech-style pale lager featuring malt flavours, floral hop notes, and a clean, dry finish.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Red Ale</span>
+          <span class="beer-abv">5.5% ABV</span>
+        </div>
+        <div class="beer-desc">A rich, malt-forward red boasting caramel sweetness, balanced with a subtle hop bitterness, and a smooth finish.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Session IPA</span>
+          <span class="beer-abv">3.5% ABV</span>
+        </div>
+        <div class="beer-desc">A sessional IPA infused with bright orange peel for a zesty citrus kick, perfect for easy-drinking refreshment.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">IPA</span>
+          <span class="beer-abv">5.7% ABV</span>
+        </div>
+        <div class="beer-desc">A well-crafted IPA blending grapefruit, orange, and tropical fruit flavours for a refreshing and balanced drinking experience.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Big IPA</span>
+          <span class="beer-abv">6.8% ABV</span>
+        </div>
+        <div class="beer-desc">A bold West Coast IPA with citrusy aromas, balanced bitterness, and a crisp finish, crafted for hop lovers who crave robust flavours.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Double IPA</span>
+          <span class="beer-abv">8.0% ABV</span>
+        </div>
+        <div class="beer-desc">A Double IPA bursting with Sultana hops bringing bold pineapple, citrus, and pine flavours. A smooth malt backbone balances the resinous bitterness for a crisp and juicy finish.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Baltic Porter</span>
+          <span class="beer-abv">9.0% ABV</span>
+        </div>
+        <div class="beer-desc">A rich, full-bodied Baltic Porter with deep notes of dark chocolate, roasted coffee, and dried fruit, finishing smooth and warming.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Stout</span>
+          <span class="beer-abv">5.5% ABV</span>
+        </div>
+        <div class="beer-desc">A smooth stout with rich notes of dark chocolate, coffee, and caramel, finishing with a velvety texture and balanced bitterness.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Lemonade Radler</span>
+          <span class="beer-abv">4.0% ABV</span>
+        </div>
+        <div class="beer-desc">A refreshing Lemonade Radler blending zesty citrus with a hint of sweetness. Light-bodied and effervescent, perfect for sun, sand, and all things summer.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CIDER -->
+  <div class="section">
+    <div class="section-title">Cider</div>
+    <div class="cider-list">
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Naked Apple</span>
+          <span class="beer-abv">5.3% ABV</span>
+        </div>
+        <div class="beer-desc">A classic, crisp, and refreshing medium dry cider with bright apple flavours accented by subtle citrus and pear notes.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Wild Blueberry</span>
+          <span class="beer-abv">5.3% ABV</span>
+        </div>
+        <div class="beer-desc">A unique medium dry cider with a wine-like character, featuring rich blueberry flavours and a hint of plum on the finish.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Perfect Pear</span>
+          <span class="beer-abv">5.3% ABV</span>
+        </div>
+        <div class="beer-desc">A well-balanced medium dry cider showcasing delicate pear, apple, and citrus notes for a refreshing and versatile sip.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Fresh Strawberry</span>
+          <span class="beer-abv">5.3% ABV</span>
+        </div>
+        <div class="beer-desc">A medium dry cider with a delightful balance of soft strawberry notes and subtle apple undertones, offering a crisp finish.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Juicy Peach</span>
+          <span class="beer-abv">5.3% ABV</span>
+        </div>
+        <div class="beer-desc">A sweet, fruit-forward cider bursting with vibrant peach aroma and flavour, delivering a smooth and refreshing taste.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Honey Crisp Apple</span>
+          <span class="beer-abv">6.0% ABV</span>
+        </div>
+        <div class="beer-desc">A medium dry cider with bold apple flavour, crisp vinous notes, and a balanced, rounded mouthfeel.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- SELTZER -->
+  <div class="section">
+    <div class="section-title">Seltzer</div>
+    <div class="seltzer-list">
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Blackberry</span>
+          <span class="beer-abv">5.5% ABV</span>
+        </div>
+        <div class="beer-desc">Only 1 gram of sugar, offering bold, ripe blackberry taste with a crisp, clean profile.</div>
+      </div>
+
+      <div class="beer-item">
+        <div class="beer-header">
+          <span class="beer-name">Gin Fizz</span>
+          <span class="beer-abv">5.5% ABV</span>
+        </div>
+        <div class="beer-desc">Only 1 gram of sugar, inspired by a classic gin fizz, providing a crisp, effervescent, and refreshing experience.</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    All prices are plus applicable tax &middot; Please drink responsibly
+  </div>
+
+</body>
+</html>
