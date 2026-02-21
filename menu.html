@@ -40,10 +40,31 @@
 
     /* Header */
     .header {
-      text-align: center;
       border-bottom: 2px solid #2d3a4a;
       padding-bottom: 3px;
       margin-bottom: 3px;
+    }
+
+    .header-top {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+    }
+
+    .logo-left, .logo-right {
+      height: 60px;
+      width: auto;
+      flex-shrink: 0;
+    }
+
+    .logo-right {
+      border-radius: 6px;
+    }
+
+    .header-text {
+      text-align: center;
+      flex: 1;
     }
 
     .header h1 {
@@ -82,11 +103,11 @@
 
     /* Section */
     .section {
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .section-title {
-      font-size: 18px;
+      font-size: 19px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 3px;
@@ -104,7 +125,7 @@
 
     .beer-item {
       break-inside: avoid;
-      margin-bottom: 2px;
+      margin-bottom: 4px;
     }
 
     .beer-header {
@@ -114,7 +135,7 @@
     }
 
     .beer-name {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 700;
     }
 
@@ -126,7 +147,7 @@
     }
 
     .beer-desc {
-      font-size: 13px;
+      font-size: 14px;
       color: #444;
       line-height: 1.2;
       margin-top: 0;
@@ -142,14 +163,6 @@
       column-gap: 20px;
     }
 
-    /* Logo */
-    .logo {
-      margin-bottom: 0;
-    }
-
-    .logo img {
-      max-height: 40px;
-    }
 
     /* Footer */
     .footer {
@@ -188,11 +201,14 @@
   <div class="menu-panel">
 
     <div class="header">
-      <div class="logo">
-        <img src="brig&Barqlogo.png" alt="Brig &amp; Barq Logo">
+      <div class="header-top">
+        <img class="logo-left" src="brig&Barqlogo.png" alt="Brig &amp; Barq Logo">
+        <div class="header-text">
+          <h1>The Port Taproom</h1>
+          <div class="subtitle">On Tap</div>
+        </div>
+        <img class="logo-right" src="moonriseridgeimage.jpeg" alt="Moonrise Ridge Logo">
       </div>
-      <h1>The Port Taproom</h1>
-      <div class="subtitle">On Tap</div>
     </div>
 
     <div class="pricing-bar">
@@ -365,11 +381,14 @@
   <div class="menu-panel">
 
     <div class="header">
-      <div class="logo">
-        <img src="brig&Barqlogo.png" alt="Brig &amp; Barq Logo">
+      <div class="header-top">
+        <img class="logo-left" src="brig&Barqlogo.png" alt="Brig &amp; Barq Logo">
+        <div class="header-text">
+          <h1>The Port Taproom</h1>
+          <div class="subtitle">On Tap</div>
+        </div>
+        <img class="logo-right" src="moonriseridgeimage.jpeg" alt="Moonrise Ridge Logo">
       </div>
-      <h1>The Port Taproom</h1>
-      <div class="subtitle">On Tap</div>
     </div>
 
     <div class="pricing-bar">
