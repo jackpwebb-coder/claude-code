@@ -6,7 +6,7 @@
   <title>The Port Taproom Menu</title>
   <style>
     @page {
-      size: 14in 8.5in;
+      size: 8.5in 14in;
       margin: 0;
     }
 
@@ -20,22 +20,19 @@
       font-family: Georgia, 'Times New Roman', serif;
       color: #1a1a1a;
       background: #ffffff;
-      width: 14in;
+      width: 8.5in;
       margin: 0 auto;
       display: flex;
+      flex-direction: column;
     }
 
     .menu-panel {
-      width: 7in;
-      height: 8.5in;
-      padding: 0.15in 0.3in;
+      width: 8.5in;
+      height: 7in;
+      padding: 0.15in 0.5in;
       display: flex;
       flex-direction: column;
       overflow: hidden;
-    }
-
-    .menu-panel:first-child {
-      border-right: 1px dashed #ccc;
     }
 
     /* Header */
