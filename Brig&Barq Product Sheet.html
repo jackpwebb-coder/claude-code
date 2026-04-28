@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brig&Barq Product Sheet</title>
+  <style>
+    @page {
+      size: letter;
+      margin: 0.6in 0.7in;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      color: #1a1a1a;
+      background: #ffffff;
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.6in 0.7in;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      height: 120px;
+      width: auto;
+    }
+
+    .product-photo {
+      height: 120px;
+      width: auto;
+      border-radius: 6px;
+    }
+
+    .pricing-note {
+      font-size: 12px;
+      color: #333;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
+      padding-bottom: 8px;
+    }
+
+    .pricing-note span {
+      font-weight: 700;
+    }
+
+    .beer-item {
+      margin-bottom: 24px;
+    }
+
+    .beer-header {
+      display: flex;
+      align-items: baseline;
+      gap: 20px;
+      margin-bottom: 6px;
+    }
+
+    .beer-name {
+      font-size: 22px;
+      font-weight: 700;
+    }
+
+    .beer-details {
+      font-size: 16px;
+      color: #1a1a1a;
+    }
+
+    .beer-desc {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.5;
+      max-width: 85%;
+    }
+
+    @media print {
+      body {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+        padding: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <img class="logo" src="brig&Barqlogo.png" alt="Brig &amp; Barq Brewing Logo">
+    <img class="product-photo" src="brig_products.png" alt="Brig &amp; Barq Products">
+  </div>
+
+  <div class="pricing-note">
+    &middot; <span>Can prices are plus tax and deposit</span>
+    &middot; <span>Keg prices are plus tax</span>
+    &middot; <span>30L and 50L kegs available on request</span>
+  </div>
+
+  <div class="beer-item">
+    <div class="beer-header">
+      <span class="beer-name" style="color: #b8860b;">Lager</span>
+      <span class="beer-details">4.5% ABV &middot; 355ml Can ($2.65) / 473ml Can ($3.50) / 20L ($110)</span>
+    </div>
+    <div class="beer-desc">A crisp and refreshing Czech-style pale lager featuring malt flavours, floral hop notes, and a clean, dry finish.</div>
+  </div>
+
+  <div class="beer-item">
+    <div class="beer-header">
+      <span class="beer-name" style="color: #c0392b;">Red Ale</span>
+      <span class="beer-details">5.5% ABV &middot; 473ml Can ($3.50) / 20L ($110)</span>
+    </div>
+    <div class="beer-desc">A rich, malt-forward red boasting caramel sweetness, balanced with a subtle hop bitterness, and a smooth finish.</div>
+  </div>
+
+  <div class="beer-item">
+    <div class="beer-header">
+      <span class="beer-name" style="color: #1a1a1a;">IPA</span>
+      <span class="beer-details">5.7% ABV &middot; 473ml Can ($3.60) / 20L ($120)</span>
+    </div>
+    <div class="beer-desc">A well-crafted IPA blending grapefruit, orange, and tropical fruit flavours for a refreshing and balanced drinking experience.</div>
+  </div>
+
+  <div class="beer-item">
+    <div class="beer-header">
+      <span class="beer-name" style="color: #1b3a5c;">Double IPA</span>
+      <span class="beer-details">8.0% ABV &middot; 473ml Can ($3.85) / 20L ($130)</span>
+    </div>
+    <div class="beer-desc">A Double IPA bursting with Sultana hops bringing bold pineapple, citrus, and pine flavours. A smooth malt backbone balances the resinous bitterness for a crisp and juicy finish.</div>
+  </div>
+
+</body>
+</html>
