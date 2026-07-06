@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=1344">
   <title>The Port Taproom Menu</title>
   <style>
     @page {
@@ -27,11 +27,13 @@
 
     .menu-panel {
       width: 7in;
+      min-width: 7in;
       height: 8.5in;
       padding: 0.15in 0.3in;
       display: flex;
       flex-direction: column;
       overflow: hidden;
+      flex-shrink: 0;
     }
 
     .menu-panel:first-child {
